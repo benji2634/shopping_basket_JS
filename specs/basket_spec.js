@@ -8,27 +8,22 @@ describe( "basket", function() {
   });
 
   it("basket has a number of items", function() {
-    assert.equal(5, basket.items.length);
+    assert.equal(6, basket.items.length);
      });
 
   it("basket can add an item", function() {
     basket.addToBasket({name: "Pizza", price: 2.00})
-    assert.equal(6, basket.items.length);
+    assert.equal(7, basket.items.length);
      });
 
   it("basket can remove last item", function() {
     basket.removeLastItem();
-    assert.equal(5, basket.items.length);
+    assert.equal(6, basket.items.length);
      });
 
   it("basket can remove any item", function() {
     basket.removeItemByName("Nature Valley")
-    assert.equal(4, basket.items.length);
-     });
-
-  it("can add bogof item", function() {
-    basket.bogof();
     assert.equal(5, basket.items.length);
-  });
+     });
 
 });
